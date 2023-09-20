@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "843594121052",
+    "firebase_url": "https://plantsdoctor2023-default-rtdb.firebaseio.com",
+    "project_id": "plantsdoctor2023",
+    "storage_bucket": "plantsdoctor2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843594121052:android:00b5b13f7c1354e7fc8b99",
+        "android_client_info": {
+          "package_name": "com.ahmednasser1601.plants_doctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843594121052-0oj2toh2hgrem8opu6u7s95j2vfvcco2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVz3jrrzdYbl1S103s1yHEw0IjkSwT74A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843594121052-0oj2toh2hgrem8opu6u7s95j2vfvcco2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
