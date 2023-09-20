@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>764908969792-ouek7qjted7f6ur4beqmvb4i8jgbdhug.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.764908969792-ouek7qjted7f6ur4beqmvb4i8jgbdhug</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAqp2hzWpeMhi1GHUy6QO7YeMjqVn_8QoQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>764908969792</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ahmednasser1601.plantsDoctor</string>
+	<key>PROJECT_ID</key>
+	<string>plantsdoctor23</string>
+	<key>STORAGE_BUCKET</key>
+	<string>plantsdoctor23.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:764908969792:ios:5b1fecb27598a725f6e4a5</string>
+	<key>DATABASE_URL</key>
+	<string>https://plantsdoctor23-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
