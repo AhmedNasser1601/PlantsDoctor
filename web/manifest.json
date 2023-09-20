@@ -1,0 +1,35 @@
+{
+    "name": "Plants Doctor",
+    "short_name": "Plants Doctor",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#hexcode",
+    "theme_color": "#hexcode",
+    "description": "This app is designed to help plant owners diagnose and treat diseases that may affect their plants. It uses a machine learning model to predict whether a plant is diseased or healthy based on an uploaded image.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

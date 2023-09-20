@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+      Developed by:
+          ENG. Ahmed Nasser
+              https://github.com/AhmedNasser1601
+
+      Feel free to find the whole project here: https://github.com/AhmedNasser1601/PlantsDoctor
+    -->
+
+    <base href="/">
+
+    <meta charset="UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="description" content="Designed to help plant owners diagnose and treat diseases that may affect their plants.">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="plants_doctor">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <title>Plants Doctor</title>
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+      // The value below is injected by flutter build, do not touch.
+      var serviceWorkerVersion = null;
+    </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="flutter.js" defer></script>
+  </head>
+  <body>
+  <script>
+      window.addEventListener('load', function(ev) {
+        // Download main.dart.js
+        _flutter.loader.loadEntrypoint({
+          serviceWorker: {
+            serviceWorkerVersion: serviceWorkerVersion,
+          },
+          onEntrypointLoaded: function(engineInitializer) {
+            engineInitializer.initializeEngine().then(function(appRunner) {
+              appRunner.runApp();
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
