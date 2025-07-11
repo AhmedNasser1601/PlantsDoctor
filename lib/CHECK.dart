@@ -55,7 +55,7 @@ class _CheckPageState extends State<CheckPage> {
   }
 
   Future<void> _classifyImage() async {
-    String? apikey = html.window['APIKEY'];
+    final response = await http.post(
       Uri.parse('https://api.plant.id/v2/identify'),
       headers: {
         'Content-Type': 'application/json',
@@ -95,6 +95,7 @@ class _CheckPageState extends State<CheckPage> {
       } else {
         setState(() => _result = 'Plant not found');
       }
+      break;
     } else {
       setState(() => _result = 'Error: ${response.reasonPhrase}');
     }
