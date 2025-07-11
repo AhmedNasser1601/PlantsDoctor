@@ -57,7 +57,7 @@ class AboutPage extends StatelessWidget {
                 ),
                 SizedBox(height: 8.0),
                 Text(
-                  ' - Ahmed Nasser',
+                  ' - Eng. Ahmed Nasser',
                   style: TextStyle(
                     fontSize: 16.0,
                   ),
