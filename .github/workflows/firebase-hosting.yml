@@ -24,7 +24,7 @@ jobs:
         run: flutter pub get
 
       - name: 🧱 Build Flutter Web App
-        run: flutter build web --release
+        run: flutter build web --release --dart-define=apikey=${{ secrets.APIKEY }}
 
       - name: 🚀 Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
