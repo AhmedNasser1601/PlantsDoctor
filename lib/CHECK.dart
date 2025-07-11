@@ -55,56 +55,49 @@ class _CheckPageState extends State<CheckPage> {
   }
 
   Future<void> _classifyImage() async {
-    final List<String> apiKeys = [
-      'kvsdLHCo355jGksdfXD9CEx9v5xe5sM56wU40xcSab0zBI7LND',
-      'V4G2wLVoNCcbdctcqV0FYms4wPiPDxa7XO1ryNY0b8SHhBwl9n',
-    ];
+    final response = await http.post(
+      Uri.parse('https://api.plant.id/v2/identify'),
+      headers: {
+        'Content-Type': 'application/json',
+        'Api-Key': 'V4G2wLVoNCcbdctcqV0FYms4wPiPDxa7XO1ryNY0b8SHhBwl9n',
+      },
+      body: jsonEncode({
+        'organs': [
+          'leaf',
+          'flower',
+          'fruit',
+          'bark',
+          'habit',
+          'Root',
+          'Stem',
+          'Seed',
+          'Inflorescence',
+          'Bud',
+          'other'
+        ],
+        'organs_threshold': 0.51,
+        'language': 'en',
+        'plant_details': ['common_names'],
+        'images': [_imageUrl.split(',')[1]],
+      }),
+    );
 
-    for (final apiKey in apiKeys) {
-      final response = await http.post(
-        Uri.parse('https://api.plant.id/v2/identify'),
-        headers: {
-          'Content-Type': 'application/json',
-          'Api-Key': apiKey,
-        },
-        body: jsonEncode({
-          'organs': [
-            'leaf',
-            'flower',
-            'fruit',
-            'bark',
-            'habit',
-            'Root',
-            'Stem',
-            'Seed',
-            'Inflorescence',
-            'Bud',
-            'other'
-          ],
-          'organs_threshold': 0.51,
-          'language': 'en',
-          'plant_details': ['common_names'],
-          'images': [_imageUrl.split(',')[1]],
-        }),
-      );
-
-      if (response.statusCode == 200) {
-        final Map<String, dynamic> responseBody = json.decode(response.body);
-        final List<dynamic> suggestions = responseBody['suggestions'];
-        if (suggestions.isNotEmpty) {
-          final Map<String, dynamic> plantDetails =
-              suggestions[0]['plant_details'];
-          final List<dynamic> commonNames = plantDetails['common_names'];
-          setState(() => _result = commonNames.isNotEmpty
-              ? commonNames[0]
-              : suggestions[0]['plant_name']);
-        } else {
-          setState(() => _result = 'Plant not found');
-        }
-        break;
+    if (response.statusCode == 200) {
+      final Map<String, dynamic> responseBody = json.decode(response.body);
+      final List<dynamic> suggestions = responseBody['suggestions'];
+      if (suggestions.isNotEmpty) {
+        final Map<String, dynamic> plantDetails =
+            suggestions[0]['plant_details'];
+        final List<dynamic> commonNames = plantDetails['common_names'];
+        setState(() => _result = commonNames.isNotEmpty
+            ? commonNames[0]
+            : suggestions[0]['plant_name']);
       } else {
-        setState(() => _result = 'Error: ${response.reasonPhrase}');
+        setState(() => _result = 'Plant not found');
       }
+      break;
+    } else {
+      setState(() => _result = 'Error: ${response.reasonPhrase}');
     }
   }
 
