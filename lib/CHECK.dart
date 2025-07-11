@@ -59,7 +59,7 @@ class _CheckPageState extends State<CheckPage> {
       Uri.parse('https://api.plant.id/v2/identify'),
       headers: {
         'Content-Type': 'application/json',
-        'Api-Key': 'HtI4H7b1ZLo9kR6qOavEhbjm66XmM7CrDqRGaZpgLyx5k2hz75',
+        'Api-Key': String.fromEnvironment('APIKEY'),
       },
       body: jsonEncode({
         'organs': [
