@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'dart:html';
 
 import 'package:flutter/foundation.dart' show Uint8List, kIsWeb;
 import 'package:flutter/material.dart';
@@ -59,7 +60,7 @@ class _CheckPageState extends State<CheckPage> {
       Uri.parse('https://api.plant.id/v2/identify'),
       headers: {
         'Content-Type': 'application/json',
-        'Api-Key': $apiKey,
+        'Api-Key': window['APIKEY'],
       },
       body: jsonEncode({
         'organs': [
