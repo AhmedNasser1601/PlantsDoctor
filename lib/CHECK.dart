@@ -55,11 +55,12 @@ class _CheckPageState extends State<CheckPage> {
   }
 
   Future<void> _classifyImage() async {
+    const apikey = String.fromEnvironment('APIKEY');
     final response = await http.post(
       Uri.parse('https://api.plant.id/v2/identify'),
       headers: {
         'Content-Type': 'application/json',
-        'Api-Key': 'V4G2wLVoNCcbdctcqV0FYms4wPiPDxa7XO1ryNY0b8SHhBwl9n',
+        'Api-Key': $apikey,
       },
       body: jsonEncode({
         'organs': [
