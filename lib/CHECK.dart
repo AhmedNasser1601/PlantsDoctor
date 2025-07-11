@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
-import 'dart:html';
+import 'dart:html' as html;
 
 import 'package:flutter/foundation.dart' show Uint8List, kIsWeb;
 import 'package:flutter/material.dart';
@@ -58,7 +58,7 @@ class _CheckPageState extends State<CheckPage> {
   Future<void> _classifyImage() async {
     final response = await http.post(
       Uri.parse('https://api.plant.id/v2/identify'),
-      String? apikey = window['APIKEY'];
+      String? apikey = html.window['APIKEY'];
       headers: {
         'Content-Type': 'application/json',
         'Api-Key': apikey,
