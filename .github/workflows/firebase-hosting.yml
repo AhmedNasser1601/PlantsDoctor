@@ -26,6 +26,9 @@ jobs:
       - name: 🧱 Build Flutter Web App
         run: flutter build web --release
 
+      - name: 🔧 Inject secret into web/index.html
+        run: echo "<script>window.apiKey='${{ vars.apiKey }}';</script>" >> build/web/index.html
+
       - name: 🚀 Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
